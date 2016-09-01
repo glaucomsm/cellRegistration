@@ -12,6 +12,11 @@
 		2A5D32681D78A6BA007CA329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5D32661D78A6BA007CA329 /* Main.storyboard */; };
 		2A5D326A1D78A6BA007CA329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5D32691D78A6BA007CA329 /* Assets.xcassets */; };
 		2A5D326D1D78A6BA007CA329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5D326B1D78A6BA007CA329 /* LaunchScreen.storyboard */; };
+		2A5D32761D78A833007CA329 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5D32751D78A833007CA329 /* ReusableView.swift */; };
+		2A5D32781D78A923007CA329 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5D32771D78A923007CA329 /* NibLoadableView.swift */; };
+		2A5D327C1D78A9D4007CA329 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5D327A1D78A9D4007CA329 /* DefaultTableViewCell.swift */; };
+		2A5D327D1D78A9D4007CA329 /* DefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5D327B1D78A9D4007CA329 /* DefaultTableViewCell.xib */; };
+		2A5D32801D78AB42007CA329 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5D327F1D78AB42007CA329 /* UITableViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		2A5D32691D78A6BA007CA329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A5D326C1D78A6BA007CA329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A5D326E1D78A6BA007CA329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A5D32751D78A833007CA329 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = Protocols/ReusableView.swift; sourceTree = "<group>"; };
+		2A5D32771D78A923007CA329 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadableView.swift; path = Protocols/NibLoadableView.swift; sourceTree = "<group>"; };
+		2A5D327A1D78A9D4007CA329 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewCell.swift; path = Cells/DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		2A5D327B1D78A9D4007CA329 /* DefaultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DefaultTableViewCell.xib; path = Cells/DefaultTableViewCell.xib; sourceTree = "<group>"; };
+		2A5D327F1D78AB42007CA329 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtensions.swift; path = Extensions/UITableViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +70,37 @@
 				2A5D32691D78A6BA007CA329 /* Assets.xcassets */,
 				2A5D326B1D78A6BA007CA329 /* LaunchScreen.storyboard */,
 				2A5D326E1D78A6BA007CA329 /* Info.plist */,
+				2A5D32791D78A994007CA329 /* Cells */,
+				2A5D327E1D78AB11007CA329 /* Extensions */,
+				2A5D32741D78A7A2007CA329 /* Protocols */,
 			);
 			path = cellRegistration;
+			sourceTree = "<group>";
+		};
+		2A5D32741D78A7A2007CA329 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2A5D32751D78A833007CA329 /* ReusableView.swift */,
+				2A5D32771D78A923007CA329 /* NibLoadableView.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2A5D32791D78A994007CA329 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A5D327A1D78A9D4007CA329 /* DefaultTableViewCell.swift */,
+				2A5D327B1D78A9D4007CA329 /* DefaultTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		2A5D327E1D78AB11007CA329 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A5D327F1D78AB42007CA329 /* UITableViewExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5D326D1D78A6BA007CA329 /* LaunchScreen.storyboard in Resources */,
+				2A5D327D1D78A9D4007CA329 /* DefaultTableViewCell.xib in Resources */,
 				2A5D326A1D78A6BA007CA329 /* Assets.xcassets in Resources */,
 				2A5D32681D78A6BA007CA329 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5D32781D78A923007CA329 /* NibLoadableView.swift in Sources */,
+				2A5D32761D78A833007CA329 /* ReusableView.swift in Sources */,
 				2A5D32651D78A6BA007CA329 /* ViewController.swift in Sources */,
+				2A5D32801D78AB42007CA329 /* UITableViewExtensions.swift in Sources */,
 				2A5D32631D78A6BA007CA329 /* AppDelegate.swift in Sources */,
+				2A5D327C1D78A9D4007CA329 /* DefaultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
